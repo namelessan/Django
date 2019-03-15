@@ -1,0 +1,12 @@
+<h1>Recent Shouts:</h1>
+{% if shout_list %}
+  <b>hello</b>
+  <ul>
+  {% for shout in shout_list %}
+    <li>{{ shout.shout_time }}--{{ shout.shout_text }}</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No shout yet!</p>
+{% endif %}
+<a href="{% url 'shouts:index' %}">Shout again?</a>

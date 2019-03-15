@@ -1,0 +1,6 @@
+<form action="{% url 'shouts:index' %}" method="post">
+  {% csrf_token %}
+<label>Shout Text</label>
+<input type="text" name="shout_text"><br>
+<input type="submit" value="shout!">
+</form>
